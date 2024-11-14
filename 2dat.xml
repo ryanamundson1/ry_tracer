@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<project bitmap_file="box_test.bmp" id="box_test" render_asp="1" render_h="480" render_w="640" samples="1">
+	<create_mesh>
+		<name color="0.2,0.5,0.9" location="0,-7,-1" matId="8" radius="5" type="sphere" uvMapper="spherical"> sphere </name>
+
+		<name color="0.5,0.4,0.5" matId="3" normal="0,0,1" origin="0,0,-15" type="plane"> plane </name>
+
+		<name color="0.5,0.4,0.5" matId="3" normal="0,-1,0" origin="0,15,0" type="plane"> plane </name>
+
+		<name color="0.5,0.4,0.5" matId="3" normal="0,1,0" origin="0,-15,0" type="plane"> plane </name>
+
+		<name color="0.9,0.1,0.5" location="0,7,-1" matId="2" radius="5" type="sphere" uvMapper="spherical"> sphere </name>
+
+		<name color="0.9,0.1,0.5" location="2,0,8" matId="4" radius="3" type="sphere" uvMapper="spherical"> sphere </name>
+
+		<name color="0.9,0.1,0.5" location="10,0,-8" matId="7" radius="3" type="sphere" uvMapper="spherical"> sphere </name>
+
+		<name color="0.5,0.4,0.5" matId="3" normal="0,0,-1" origin="0,0,15" type="plane"> plane </name>
+
+		
+		<name matId="6" maxPoint="10,3,3" minPoint="5,-3,-3" type="box" uvMapper="spherical"> box </name>
+
+	</create_mesh>
+
+	<create_camera>
+		<name dof_samples="0" eye="-40,0,0" f_stop="4.2" focal_length="40" fov="35" lookat="0,0,-5" type="perspectiveCamera" up="0,1,0"> perspectiveCamera </name>
+
+	</create_camera>
+
+	<create_light>
+		<name color="1,.9,.5" falloff="linear" intensity="38" location="-8,5,9" shadows="true" softSamples="16" spread=".5" type="pointLight"> pointlight </name>
+
+		<name color=".5,.9,1" falloff="linear" intensity="38" location="-8,-5,9" shadows="true" softSamples="16" spread=".5" type="pointLight"> pointlight </name>
+
+		<name color=".9,.9,1" direction=".5,0,-2" intensity=".9" type="directionalLight"> directionalLight </name>
+
+		<name color=".9,.9,1" falloff="square" intensity="1185" location="-11,-5,-4" shadows="true" softSamples="16" spread=".5" type="pointLight"> pointlight </name>
+		
+	</create_light>
+
+	<create_mat>
+		<name diffuse="0.1,0.8,0.2" id="1" kd=".9" ks=".95" opacity="1,1,1" roughness=".03" specular="1,1,1" type="phong"> phong </name>
+
+		<name diffuse="0.87,0.55,0.2" id="4" kd=".9" ks="1" opacity="1,1,1" roughness=".15" specular="1,1,1" type="phong"> phong </name>
+
+		<name diffuse="0.7,0.1,0.9" diffuseTex="bitmapTexture" id="2" kd=".9" opacity="1,1,1" type="lambert"> lambert 
+			<diffuseTex filename="fractal.bmp" type="BitmapTexture">
+			</diffuseTex>
+
+		</name>
+
+		<name diffuse="0.85,0.78,0.64" id="3" kd="1" opacity="1,1,1" type="lambert"> lambert </name>
+
+		<name diffuse="0.4,0.5,0.8" diffuseTex="woodGrain" id="6" kd=".9" ks=".95" opacity="1,1,1" roughness=".01" specular="1,1,1" type="phong"> phong
+			<diffuseTex dark="0.2,0.3,0.1" grain="50" light="0.9,0.5,0.5" scale_u="10" scale_v="10" type="WoodGrain">
+			</diffuseTex>
+
+		</name>
+
+		<name diffuse="0.4,0.5,0.8" diffuseTex="CheckerBoard" id="8" kd=".9" ks=".95" opacity="1,1,1" roughness=".01" specular="1,1,1" type="phong"> phong
+			<diffuseTex dark="0.2,0.2,0.3" light="0.4,0.6,0.9" scale_u="10" scale_v="10" type="CheckerBoard">
+			</diffuseTex>
+
+		</name>
+
+		<name id="5" type="normalmap"> normalmap </name>
+
+		<name diffuse="0.87,0.55,0.55" id="7" kd=".9" kr="1" ks=".1" opacity="1,1,1" roughness=".05" specular="1,1,1" type="chrome"> chrome </name>
+
+	</create_mat>
+
+</project>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project id="assignment1">
+	<create_mesh>
+		<name color="0.2,0.5,0.9" location="0,0,2" matId="1" radius="5" type="sphere"> sphere </name>
+
+		<name color="0.5,0.4,0.5" matId="3" normal="0,0,1" origin="0,-3,0" type="plane"> plane </name>
+
+		<name color="0.9,0.1,0.5" location="0.5,0,-2" matId="2" radius="7" type="sphere"> sphere </name>
+
+	</create_mesh>
+
+	<create_camera>
+		<name eye="-40,0,0" fov="45" lookat="0,0,0" type="perspectiveCamera" up="0,1,0"> perspectiveCamera </name>
+
+	</create_camera>
+
+	<create_light>
+		<name color="1,.9,.9" intensity=".9" location="-8,4,4" shadows="true" type="pointLight"> pointlight </name>
+
+		<name color=".9,.9,1" intensity=".9" location="-8,-4,2" shadows="true" type="pointLight"> pointlight </name>
+
+		<name color=".9,.9,1" direction=".5,-.10,-.5" intensity=".9" type="directionalLight"> directionalLight </name>
+		
+	</create_light>
+
+	<create_mat>
+		<name diffuse="0.1,0.8,0.2" id="1" kd=".9" ks=".8" opacity="1,1,1" roughness=".5" specular="1,1,1" type="phong"> phong </name>
+
+		<name diffuse="0.7,0.1,0.9" id="2" kd=".9" opacity="1,1,1" type="lambert"> lambert </name>
+
+		<name diffuse="0.85,0.78,0.64" id="3" kd="1" opacity="1,1,1" type="lambert"> lambert </name>
+
+	</create_mat>
+
+</project>

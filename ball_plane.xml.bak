@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project bitmap_file="ball_plane.bmp" id="ball_plane" render_asp="1.33" render_h="480" render_w="640" samples="8">
+	<create_mesh>
+		<name color="0.2,0.5,0.9" location="0,0,-1" matId="6" radius="4" type="sphere" uvMapper="spherical"> sphere </name>
+
+		<name color="0.5,0.4,0.5" matId="3" normal="0,0,1" origin="0,0,-7" type="plane" uvMapper="planer"> plane </name>
+
+		<name color="0.82,0.69,0.92" matId="0" normal="0,0,-1" origin="0,0,400" type="plane" uvMapper="planer"> plane </name>
+
+	</create_mesh>
+
+	<create_camera>
+		<name dof_samples="0" eye="-40,0,0" f_stop="4.2" focal_length="40" fov="20" lookat="0,0,-5" type="perspectiveCamera" up="0,1,0"> perspectiveCamera </name>
+
+	</create_camera>
+
+	<create_light>
+		<name color=".9,.885,0" falloff="square" intensity="90" location="-5,5,10" shadows="true" softSamples="16" spread="1" type="pointLight"> pointlight </name>
+
+		<name color="0,.9,.85" falloff="square" intensity="90" location="-5,-5,10" shadows="true" softSamples="16" spread="1" type="pointLight"> pointlight </name>
+
+	</create_light>
+
+	<create_mat>
+		<name diffuse="0.85,0.78,0.64" id="3" kd="1" opacity="1,1,1" type="lambert"> lambert </name>
+
+		<name diffuse="0.4,0.5,0.8" id="6" kd=".9" ks=".95" opacity="1,1,1" roughness=".05" specular="1,1,1" type="phong"> phong </name>
+
+		<name diffuse="0.87,0.73,0.25" filter=".1" id="7" ior="1.55" kd=".9" kr=".7" ks=".9" opacity="1,1,1" roughness=".03" samples="16" specular="1,1,1" type="glass"> glass </name>
+
+		<name diffuse="0.94,0.56,0.87" id="8" kd=".9" kr=".7" ks=".9" opacity="1,1,1" roughness=".03" samples="16" specular="1,1,1" spread=".01" type="diffusechrome"> diffusechrome </name>
+
+	</create_mat>
+
+</project>

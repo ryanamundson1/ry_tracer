@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project id = "ball_plane_filtering" samples= "2" bitmap_file = "ball_plane_filter.bmp" render_w = "640" render_h = "480" render_asp="1.33">
+	<create_mesh>
+		<name type="sphere" radius="4" location="0,0,-1" color="0.2,0.5,0.9" matId="6" uvMapper = "spherical"> sphere </name>
+		<name type="plane" color="0.5,0.4,0.5" normal="0,0,1" origin="0,0,-7" matId="3" uvMapper = "planer"> plane </name>
+		<name type="plane" color="0.82,0.69,0.92" normal="0,0,-1" origin="0,0,400" matId="0" uvMapper = "planer"> plane </name>
+	</create_mesh>
+	<create_camera>
+		<name type="perspectiveCamera" eye="-40,0,0" up="0,1,0" lookat="0,0,-5" fov="20" f_stop="4.2" focal_length="40" dof_samples="0"> perspectiveCamera </name>
+	</create_camera>
+	<create_light>
+		<name type="pointLight" location="-5,5,10" color=".9,.885,0" intensity="90" shadows="true" softSamples="16" spread = "1" falloff= "square"> pointlight </name>
+		<name type="pointLight" location="-5,-5,10" color="0,.9,.85" intensity="90" shadows="true" softSamples="16" spread = "1" falloff= "square"> pointlight </name>
+	</create_light>
+	<create_mat>
+		<name type="lambert" id="3" diffuse="0.85,0.78,0.64" opacity="1,1,1" kd="1" diffuseTex = "bitmapTexture"> lambert
+		<diffuseTex type="BitmapTexture" filename = "filter.bmp" scale_u = ".05" scale_v = ".05">
+			</diffuseTex>
+		</name>
+		<name type="phong" id="6" diffuse="0.4,0.5,0.8" opacity="1,1,1" specular="1,1,1" roughness=".05" kd=".9" ks=".95"> phong </name>
+		<name type="glass" id="7" diffuse="0.87,0.73,0.25" opacity="1,1,1" specular="1,1,1" roughness=".03" kd=".9" ks=".9" kr=".7" samples="16" ior="1.55" filter=".1"> glass </name>
+		<name type="diffusechrome" id="8" diffuse="0.94,0.56,0.87" opacity="1,1,1" specular="1,1,1" roughness=".03" kd=".9" ks=".9" kr=".7" samples="16" spread=".01"> diffusechrome </name>
+	</create_mat>
+</project>

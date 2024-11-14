@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<project bitmap_file="refracting_ball.bmp" id="refracting_ball" render_asp="1.33" render_h="480" render_w="640" samples="2">
+	<create_mesh>
+		<name color="0.2,0.5,0.9" location="-6,3.25,-1" matId="7" radius="4" type="sphere" uvMapper="spherical"> sphere </name>
+
+		<name color="0.5,0.4,0.5" matId="3" normal="0,0,1" origin="0,0,-15" type="plane" uvMapper="planer"> plane </name>
+
+		<name color="0.82,0.69,0.92" matId="0" normal="0,0,-1" origin="0,0,400" type="plane" uvMapper="planer"> plane </name>
+
+		<name color="0.2,0.5,0.9" location="6,.5,-1" matId="6" radius="4" type="sphere" uvMapper="spherical"> sphere </name>
+
+	</create_mesh>
+
+	<create_camera>
+		<name dof_samples="0" eye="-40,0,0" f_stop="4.2" focal_length="40" fov="20" lookat="0,0,-5" type="perspectiveCamera" up="0,1,0"> perspectiveCamera </name>
+
+	</create_camera>
+
+	<create_light>
+		<name color=".5,.9,1" falloff="linear" intensity="3" location="0,7,12" shadows="true" softSamples="16" spread=".5" type="pointLight"> pointlight </name>
+
+		<name color=".5,.9,1" falloff="linear" intensity="3" location="0,-7,12" shadows="true" softSamples="16" spread=".5" type="pointLight"> pointlight </name>
+
+		<name color=".5,.9,1" falloff="linear" intensity="3" location="-6,-7,12" shadows="true" softSamples="16" spread=".5" type="pointLight"> pointlight </name>
+
+		<name color="1,.9,.5" falloff="linear" intensity="3" location="-12,7,12" shadows="true" softSamples="16" spread=".5" type="pointLight"> pointlight </name>
+	
+		<name color="1,.9,.5" falloff="linear" intensity="3" location="-20,-7,-8" shadows="false" type="pointLight"> pointlight </name>
+		
+	</create_light>
+
+	<create_mat>
+		<name diffuse="0.85,0.78,0.64" id="3" kd="1" opacity="1,1,1" type="lambert"> lambert </name>
+
+		<name diffuse="0.4,0.5,0.8" diffuseTex="woodGrain" id="6" kd=".9" ks=".95" opacity="1,1,1" roughness=".1" specular="1,1,1" type="phong"> phong
+			<diffuseTex dark="0.2,0.3,0.1" grain="50" light="0.9,0.5,0.5" scale_u="10" scale_v="10" type="WoodGrain">
+			</diffuseTex>
+
+		</name>
+
+		<name diffuse="0.97,0.73,0.93" filter=".2" id="7" ior="1.33" kd=".9" kr=".8" ks=".9" opacity="1,1,1" roughness=".02" specular="1,1,1" type="glass"> glass </name>
+
+		<name diffuse="0.94,0.56,0.87" id="8" kd=".9" kr=".9" ks="1" opacity="1,1,1" roughness=".05" specular="1,1,1" type="chrome"> chrome </name>
+
+	</create_mat>
+
+</project>
